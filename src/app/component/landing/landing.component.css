@@ -1,0 +1,67 @@
+
+.landing-bg{
+
+background-color: #87CEFA;
+  width: 100vw;
+  height: 100vh;
+
+ /* background: url(../../../assets/images/aero1.jpg);*/
+
+}
+
+.home{
+
+	background-color: #87CEFA;
+	width: 100vw;
+	height: 100vh;
+}
+
+
+.about{
+	background-color: #263238;
+	width: 100vw;
+	height: 100vh;
+
+}
+.list-your-business{
+
+	background-color: #87CEFA;
+	width: 100vw;
+	height: 100vh;
+}
+
+
+
+.contact{
+
+	background-color: #263238;
+	width: 100vw;
+	height: 100vh;
+}
+
+h1{
+	margin: 0px;
+	padding-top: 10px;
+	text-align: center;
+	color: white;
+	font-family: 'Marck Script', cursive;
+	font-size: 100px;
+}
+
+section{
+
+	padding-top: 40px;
+}
+
+
+span{
+
+	color: white;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+}

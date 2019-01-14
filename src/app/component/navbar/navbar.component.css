@@ -1,0 +1,43 @@
+
+/* Navbar */
+.navbar{
+  min-height: 39px !important;
+  margin-bottom:0px;
+  border-radius:0px;
+  background: #87CEFA;
+  border-color: #87CEFA;
+  padding-left: 50px;
+
+}
+
+
+
+
+.navbar .navbar-nav > li > a:hover,
+.navbar .navbar-nav > li > a:focus
+{
+
+	color: #ffeb3b;
+}
+
+
+.navbar .navbar-nav > li > a{
+
+	color: white ;
+
+}
+
+.icon-bar{
+	background-color: white;
+
+}
+
+.navbar-toggle{
+
+	border-color: white;
+}
+
+.collapse, .navbar-collapse{
+
+	border-color: white;
+}
