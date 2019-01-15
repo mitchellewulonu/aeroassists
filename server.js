@@ -32,6 +32,8 @@ var server = app.listen(process.env.PORT || 8080, function(){
     console.log("App now running on port " + port);
 });
 
+module.exports = router;
+
 
 /*var express = require("express");
 var bodyParser = require("body-parser");
