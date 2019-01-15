@@ -1,4 +1,4 @@
-var express = require('express');
+/*var express = require('express');
 
 //var path = require('path');
 
@@ -32,10 +32,10 @@ var server = app.listen(process.env.PORT || 8080, function(){
     console.log("App now running on port " + port);
 });
 
-module.exports = router;
+module.exports = router;*/
 
 
-/*var express = require("express");
+var express = require("express");
 var bodyParser = require("body-parser");
 var mongodb = require("mongodb");
 var ObjectID = mongodb.ObjectID;
@@ -53,7 +53,7 @@ app.use(express.static(distDir));
 var db;
 
 // Connect to the database before starting the application server.
-mongodb.MongoClient.connect(process.env.MONGODB_URI || "mongodb://localhost:27017/test", function (err, client) {
+mongodb.MongoClient.connect("mongodb://admin:89Alexandra@ds251894.mlab.com:51894/aeroassists" || "mongodb://localhost:27017/test", function (err, client) {
   if (err) {
     console.log(err);
     process.exit(1);
@@ -66,7 +66,7 @@ mongodb.MongoClient.connect(process.env.MONGODB_URI || "mongodb://localhost:2701
   // Initialize the app.
   var server = app.listen(process.env.PORT || 8080, function () {
     var port = server.address().port;
-    console.log("App now running on port", port);
+    console.log("App now running on port " + port);
   });
 });
 
@@ -79,5 +79,5 @@ app.get("/api/search", function(req, res) {
     }
   });
 });
-*/
+
 
