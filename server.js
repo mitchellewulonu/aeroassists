@@ -22,7 +22,7 @@ app.use(express.static(distDir));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
-app.use('/', index);
+//app.use('/', index);
 app.use('/api', search);
 
 
