@@ -71,7 +71,7 @@ mongodb.MongoClient.connect("mongodb://admin:89Alexandra@ds251894.mlab.com:51894
 });
 
 app.get("/api/search", function(req, res) {
-  db.fulldb.find(function(err, docs) {
+  db.collection(COLLECTION).find(function(err, docs) {
     if (err) {
       handleError(res, err.message, "Failed to get information.");
     } else {
