@@ -75,7 +75,7 @@ app.get("/api/search", function(req, res) {
     if (err) {
       handleError(res, err.message, "Failed to get information.");
     } else {
-      res.json(docs);
+      res.status(200).json(docs);
     }
   });
 });
