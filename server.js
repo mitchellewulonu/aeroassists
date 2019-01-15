@@ -64,7 +64,7 @@ mongodb.MongoClient.connect(process.env.MONGODB_URI || "mongodb://localhost:2701
 });
 
 app.get("/api/search", function(req, res) {
-  db.collection(COLLECTION).find({})(function(err, docs) {
+  db.collection(COLLECTION).find(function(err, docs) {
     if (err) {
       handleError(res, err.message, "Failed to get information.");
     } else {
