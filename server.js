@@ -1,9 +1,8 @@
-/*var express = require('express');
+var express = require('express');
 
-var path = require('path');
+//var path = require('path');
 
 var bodyParser =require('body-parser');
-var ro
 
 var index = require('./routes/index');
 var search = require('./routes/search');
@@ -24,11 +23,11 @@ app.use('/api', search);
 app.listen(process.env.PORT || 8080, function(){
 	
 	var port = server.address().port;
-    console.log("App now running on port", port);
-});*/
+    console.log("App now running on port" + port);
+});
 
 
-var express = require("express");
+/*var express = require("express");
 var bodyParser = require("body-parser");
 var mongodb = require("mongodb");
 var ObjectID = mongodb.ObjectID;
@@ -72,5 +71,5 @@ app.get("/api/search", function(req, res) {
     }
   });
 });
-
+*/
 
