@@ -12,6 +12,12 @@ var search = require('./routes/search');
 var app = express();
 
 
+// Create link to Angular build directory
+var distDir = __dirname + "/dist/";
+app.use(express.static(distDir));
+
+
+
 //body parser Middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
