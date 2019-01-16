@@ -37,8 +37,11 @@ module.exports = router;*/
 
 var express = require("express");
 var bodyParser = require("body-parser");
-var mongodb = require("mongodb");
-var ObjectID = mongodb.ObjectID;
+//var mongodb = require("mongodb");
+
+var mongojs = require('mongojs');
+
+//var ObjectID = mongodb.ObjectID;
 
 var COLLECTION = "fulldb";
 
@@ -50,10 +53,12 @@ var distDir = __dirname + "/dist/";
 app.use(express.static(distDir));
 
 // Create a database variable outside of the database connection callback to reuse the connection pool in your app.
-var db;
+
+//var db;
+var db= mongojs('mongodb://admin:89Alexandra@ds251894.mlab.com:51894/aeroassists', ['fulldb']);
 
 // Connect to the database before starting the application server.
-mongodb.MongoClient.connect("mongodb://admin:89Alexandra@ds251894.mlab.com:51894/aeroassists" || "mongodb://localhost:27017/test", function (err, client) {
+/*mongodb.MongoClient.connect("mongodb://admin:89Alexandra@ds251894.mlab.com:51894/aeroassists" || "mongodb://localhost:27017/test", function (err, client) {
   if (err) {
     console.log(err);
     process.exit(1);
@@ -68,10 +73,12 @@ mongodb.MongoClient.connect("mongodb://admin:89Alexandra@ds251894.mlab.com:51894
     var port = server.address().port;
     console.log("App now running on port " + port);
   });
-});
+});*/
+
+
 
 app.get("/api/search", function(req, res) {
-  db.collection(COLLECTION).find(function(err, docs) {
+  db.fulldb.find(function(err, docs) {
     if (err) {
       handleError(res, err.message, "Failed to get information.");
     } else {
