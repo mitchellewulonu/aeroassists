@@ -11,4 +11,12 @@ export class SearchService {
 
   }
 
+
+  search(){
+
+  	return this.http.get('https://aeroassists.herokuapp.com/api/search')
+  		.map(res => res.json());
+
+
+  }
 }
