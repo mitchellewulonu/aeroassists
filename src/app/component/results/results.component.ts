@@ -9,13 +9,13 @@ import  {search} from '../../../search';
 })
 export class ResultsComponent implements OnInit {
 
-	@Input() resultss:search[];
+	//@Input() resultss:search[];
 
   constructor(private searchService:SearchService) { }
 
   ngOnInit() {
 
-  	console.log('here are results: '+ this.resultss);
+  	//console.log('here are results: '+ this.resultss);
 
   }
 

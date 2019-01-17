@@ -78,7 +78,7 @@ app.get("/api/search", function(req, res) {
       res.status(200);
       res.send(docs);
       //.json(docs);
-      console.log('data retreival finished');
+      console.log('data retrieval finished');
 
     }
   });
