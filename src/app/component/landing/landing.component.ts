@@ -8,7 +8,7 @@ import  {search} from '../../../search';
 
 @Component({
   selector: 'app-landing',
-  template:'<app-results [results]="searchresult"> </app-results>',
+  template:'<app-results [resultss]="searchresult"> </app-results>',
   templateUrl: './landing.component.html',
   styleUrls: ['./landing.component.css']
 })
