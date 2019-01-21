@@ -71,9 +71,7 @@ mongodb.MongoClient.connect("mongodb://admin:89Alexandra@ds251894.mlab.com:51894
 });
 
 
-app.get('*', function(req, res) {
-  res.sendFile('src/index.html')
-})
+
 
 
 app.get("/api/search", function(req, res) {
