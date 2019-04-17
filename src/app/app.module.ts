@@ -31,7 +31,7 @@ const appRoutes: Routes = [
   imports: [
     HttpModule,
     BrowserModule,
-    RouterModule.forRoot(appRoutes)  //important    
+    RouterModule.forRoot(appRoutes)  //importantt    
 
   ],
   providers: [SearchService],
