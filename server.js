@@ -89,8 +89,8 @@ app.get("/api/search", function(req, res) {
 });
 
 /* ANGULAR MAIN ROUTE */
-router.get('*', function(req, res) {
-   res.sendfile('./src/index.html');
+router.get('/*', function(req, res) {
+   res.sendfile('src/index.html');
 });
 
 
