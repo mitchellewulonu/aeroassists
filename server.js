@@ -88,9 +88,24 @@ app.get("/api/search", function(req, res) {
   });
 });
 
-/* ANGULAR MAIN ROUTE */
-app.get('/*', function(req, res) {
-   res.sendfile('src/index.html');
+
+app.get("/api/search/:country/:services", function(req, res) {
+  db.collection(COLLECTION).find({country:req.params.country, services:{$regex:req.params.services}}).toArray(function(err, docs) {
+    if (err) {
+      handleError(res, err.message, "Failed to get information.");
+    } else {
+      res.status(200);
+      res.send(docs);
+      //.json(docs);
+      console.log('data retrieval finished');
+
+    }
+  });
 });
+
+/* ANGULAR MAIN ROUTE */
+/*app.get('/results', function(req, res) {
+   res.sendfile('src/app/component/results/results.component.html');
+});*/
 
 
