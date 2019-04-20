@@ -90,7 +90,7 @@ app.get("/api/search", function(req, res) {
 
 
 app.get("/api/search/:country/:services", function(req, res) {
-  db.collection(COLLECTION).find({country:req.params.country, services:{$regex:req.params.services}}).toArray(function(err, docs) {
+  db.collection(COLLECTION).find({country:{$regex:req.params.country,  $options: 'i'}, services:{$regex:req.params.services, $options: 'i'}}).toArray(function(err, docs) {
     if (err) {
       handleError(res, err.message, "Failed to get information.");
     } else {

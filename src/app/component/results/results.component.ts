@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import {SearchService} from '../../services/search/search.service'
 import  {search} from '../../../search';
 import { Router} from '@angular/router';
+import  {LandingComponent} from '../landing/landing.component';
 
 @Component({
   selector: 'app-results',
@@ -10,13 +11,15 @@ import { Router} from '@angular/router';
 })
 export class ResultsComponent implements OnInit {
 
-	//@Input() resultss:search[];
+results:search[];
 
-  constructor(private searchService:SearchService) { }
+  constructor(private searchService:SearchService, private LandingComponent:LandingComponent) { }
 
   ngOnInit() {
 
-  	//console.log('here are results: '+ this.resultss);
+
+
+  	this.results=this.LandingComponent.searchResult
 
   }
 

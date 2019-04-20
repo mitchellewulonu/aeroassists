@@ -6,6 +6,7 @@ import  {search} from '../../../search';
 
 
 
+
 @Component({
   selector: 'app-landing',
   templateUrl: './landing.component.html',
@@ -13,21 +14,27 @@ import  {search} from '../../../search';
 })
 export class LandingComponent implements OnInit {
 
-	searchresult:search[];
+	searchResult:search[];
+  searchQuery:string;
+  country:string;
 
   constructor(private searchService: SearchService) { 
 
-  		this.searchService.search().subscribe(results => 
-		{
-			this.searchresult=results
-  			console.log(results)
-  		});
+ 
 
   }
 
   ngOnInit() {
-  }
 
 
+}
+
+executeSearch(){
+
+    this.searchService.search(this.searchQuery, this.country).subscribe(results => 
+    {
+      this.searchResult=results
+        console.log(results)
+      });
 
 }

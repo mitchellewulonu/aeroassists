@@ -14,11 +14,12 @@
 	<div class="row" style="margin-top: 100px;">
 	  <div class="col-md-3"></div>
 	  <div class="col-md-6" style="background-color: #263238; padding: 20px 0px 20px 0px; border-radius: 25px; ">
-	  <input name="what" placeholder="I'm looking for..." style="padding-left: 10px;  border-radius: 10px; border-style: none;  height: 50px; width: 270px;"> 
+	  <input name="what" placeholder="I'm looking for..." [(ngModel)]="search" style="padding-left: 10px;  border-radius: 10px; border-style: none;  height: 50px; width: 270px;"> 
 	  <span style=" padding: 0px 10px 0px 10px"> in </span> 
-	  <input name="what" placeholder="E.g Nigeria" style="padding-left: 10px;  border-radius: 10px; border-style: none; height: 50px; "> 
+	  <input name="what" placeholder="E.g Nigeria" [(ngModel)]="phone" style="padding-left: 10px;  border-radius: 10px; border-style: none; height: 50px; "> 
 	  <a routerLink="results" routerLinkActive="active"><span style="padding: 0px 10px 0px 20px;"> 
-	  <button style="font-size: 20px; font-family: Courier; height: 50px; width: 100px; background-color: #ffeb3b; border-radius: 10px; border-style: none; "> Find</button></span></a></div>
+	  <button style="font-size: 20px; font-family: Courier; height: 50px; width: 100px; background-color: #ffeb3b; border-radius: 10px; border-style: none; "> Find</button></span></a>
+	  </div>
 	  <div class="col-md-3"></div>
 	</div>
 

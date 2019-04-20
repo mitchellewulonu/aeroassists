@@ -13,9 +13,9 @@ export class SearchService {
   }
 
 
-  search(){
+  search(searchQuery:string, country:string){
 
-  	return this.http.get('https://aeroassists.herokuapp.com/api/search')
+  	return this.http.get('https://aeroassists.herokuapp.com/api/search/' + searchQuery + '/' + country )
   		.map(res => res.json());
 
 
