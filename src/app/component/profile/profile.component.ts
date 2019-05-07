@@ -32,7 +32,7 @@ export class ProfileComponent implements OnInit {
 
     this.profileService.profileFind(this.name.trim().replace(/ /g, '%20'),(data)=>{
 
-      if(data.length>0){
+      /*if(data.length>0){
         this.results=this.profileService.result;
         this.dataFlag=true;
       }
