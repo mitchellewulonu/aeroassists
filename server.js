@@ -52,6 +52,7 @@ app.use(express.static(distDir));
 // Create a database variable outside of the database connection callback to reuse the connection pool in your app.
 var db;
 
+
 // Connect to the database before starting the application server.
 mongodb.MongoClient.connect(process.env.MONGODB_URI || "mongodb://admin:89Alexandra@ds251894.mlab.com:51894/aeroassists", function (err, client) {
   if (err) {
@@ -71,7 +72,16 @@ mongodb.MongoClient.connect(process.env.MONGODB_URI || "mongodb://admin:89Alexan
 });
 
 
+// Add headers
+app.use(function (req, res, next) {
 
+    // Website you wish to allow to connect
+    res.setHeader('Access-Control-Allow-Origin', 'https://aeroassists.herokuapp.com/');
+      res.setHeader('Access-Control-Allow-Origin', '*');
+ // Pass to next layer of middleware
+    next();
+ 
+});
 
 
 app.get("/api/search", function(req, res) {
@@ -90,7 +100,12 @@ app.get("/api/search", function(req, res) {
 
 
 app.get("/api/search/:country/:services", function(req, res) {
-  db.collection(COLLECTION).find({country:{$regex:req.params.country,  $options: 'i'}, services:{$regex:req.params.services, $options: 'i'}}).toArray(function(err, docs) {
+  db.collection(COLLECTION).find(
+    {
+      country:{$regex:req.params.country,  $options: 'i'}, services:{$regex:req.params.services,
+      $options: 'i'}
+    }
+    ).toArray(function(err, docs) {
     if (err) {
       handleError(res, err.message, "Failed to get information.");
     } else {
@@ -102,6 +117,28 @@ app.get("/api/search/:country/:services", function(req, res) {
     }
   });
 });
+
+
+
+app.get("/api/profile/:name/", function(req, res) {
+  db.collection(COLLECTION).find(
+    {
+    name:{$regex:req.params.name,  $options: 'i'}, 
+    }
+    ).toArray(function(err, docs) {
+    if (err) {
+      handleError(res, err.message, "Failed to get information.");
+    } else {
+      res.status(200);
+      res.send(docs);
+      //.json(docs);
+      console.log('data retrieval finished');
+
+    }
+  });
+});
+
+
 
 /* ANGULAR MAIN ROUTE */
 /*app.get('/results', function(req, res) {

@@ -1,4 +1,33 @@
 p{
 
-	color: red;
+	color: black;
+}
+
+section{
+
+	padding-top: 75px;
+
+	background-color: #f9f9f9;
+
+	border:1px solid black;
+
+	width: 100vw;
+	height: 100vh;
+}
+
+ol{
+	background: white;
+	/*border:1px solid black;*/
+	border-radius:10px;
+}
+
+.result-img{
+
+
+}
+
+.result-view{
+
+	padding-top: 20px;
+	padding-bottom: 20px;
 }

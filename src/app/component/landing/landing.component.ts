@@ -12,11 +12,13 @@ import  {search} from '../../../search';
   templateUrl: './landing.component.html',
   styleUrls: ['./landing.component.css']
 })
+
 export class LandingComponent implements OnInit {
 
 	searchResult:search[];
   searchQuery:string;
   country:string;
+ 
 
   constructor(private searchService: SearchService) { 
 
@@ -29,12 +31,6 @@ export class LandingComponent implements OnInit {
 
 }
 
-executeSearch(){
 
-    this.searchService.search(this.searchQuery, this.country).subscribe(results => 
-    {
-      this.searchResult=results
-        console.log(results)
-      });
 
-}}
+}
