@@ -26,7 +26,8 @@ const appRoutes: Routes = [
   {path:'', component:LandingComponent},  //important
   //{path:'results', component:ResultsComponent}
   {path: 'results/:sq/:country', component: ResultsComponent },
-  {path: 'profile/:name', component: ProfileComponent }    
+  {path: 'profile/:name', component: ProfileComponent },
+
 
 ];
 
@@ -45,7 +46,7 @@ const appRoutes: Routes = [
     HttpModule,
     FormsModule,
     BrowserModule,
-    RouterModule.forRoot(appRoutes)  //importantt    
+    RouterModule.forRoot(appRoutes, {useHash: true})  //important  need hash to preserve page url upon reload in live env  
 
   ],
   providers: [SearchService,LandingComponent,ProfileService],
