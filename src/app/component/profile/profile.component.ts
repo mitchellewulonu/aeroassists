@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {ProfileService} from '../../services/profile/profile.service'
-import  {search} from '../../../search';
+import  {Profile} from '../../../profile';
 import  {LandingComponent} from '../landing/landing.component';
 import { ActivatedRoute,Event,Router,NavigationStart,NavigationEnd, NavigationCancel,NavigationError} from '@angular/router';
 
@@ -13,7 +13,7 @@ export class ProfileComponent implements OnInit {
 
 	name:string;
 	private sub: any;
-	results:search[];
+	profile:Profile[];
 	 dataFlag:boolean =true;
 
   constructor(private profileService:ProfileService, private route: ActivatedRoute) { }
@@ -32,8 +32,8 @@ export class ProfileComponent implements OnInit {
 
     this.profileService.profileFind(this.name.trim().replace(/ /g, '%20'),(data)=>{
 
-      /*if(data.length>0){
-        this.results=this.profileService.result;
+      if(data.length>0){
+        this.profile=this.profileService.profile;
         this.dataFlag=true;
       }
 
@@ -41,18 +41,11 @@ export class ProfileComponent implements OnInit {
       else{
 
         this.dataFlag=false;
-      } */
+      } 
 
     }
 
     )
-
-    /*.subscribe(results => 
-    {
-      this.searchService.result=results;
-        console.log(this.searchService.result)
-        console.log(this.searchQuery + "query in landing")
-      })*/;
 
 }
 

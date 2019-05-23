@@ -2,11 +2,11 @@
 	
 <app-navbar></app-navbar>
 
-<section>
+<section  ng-view autoscroll *ngFor="let Profile of profile ; let i = index">
 
 <div class="jumbotron" id="jumbo">
 	<div class="container text-center">
-		<h1> profileName</h1>
+		<h1> {{Profile.name}}</h1>
 
 	</div> <!--end container-->
 </div>
@@ -15,7 +15,8 @@
 
 
 <div class="container" style="padding: 20px 0px 0px 0px;">
-	<p>profilePicture</p>
+	<img src="{{Profile.DP}}" class="img-circle img-responsive img-responsive">
+	
 </div>
 
 
@@ -31,12 +32,10 @@
 
 
 
-		<p class="text-justify">
-		<font face="verdana" size="3">Hi,its me Mitchell and welcome to my corner. I'm an Engineer, a photographer, and a full time Software Engineer. I did 4 years in Dublin City University for my BEng(Hons) in Mechatronic Engineering(a.k.a Robotic Engineering). I recently started my career in the world of software engineering with an IT consulting firm and I'm looking forward to this new challenge. Currently my work is divided between making insightful Tech Youtube videos and photography, hence why I created this website to allow me showcase my work.</font>
-	</p>
-	<p style="padding: 10px 0px 0px 0px;">
-		<font face="verdana" size="3">Overall, I hope you enjoy browsing my website. Feel free to get in touch if you have any questions or would like more information.</font>
-	</p>
+		<p class="text-justify" >
+		{{Profile.Profile.Bio}}
+		</p>
+
 
 </div>
 
@@ -48,29 +47,6 @@
 		<div style="width: 100%; height: 20px; border-bottom: 1px solid black; text-align: center">
   			<span style="font-size: 25px; background-color: #f9f9f9; padding: 50px;">
     			Info  <!--Padding is optional-->
-  			</span>
-		</div>
-
-
-
-	<div class="row">
-		<div class="col-sm-4">
-			<div class="panel panel-default">
-				<div class="panel-body">
-					<h4>BEng. in Mechatronic Engineering</h4>
-					<blockquote>
-						<footer> <a href="https://www4.dcu.ie/courses/undergraduate/electronics/mechatronic-engineering.shtml" style="text-decoration: none;" id="college-name"><font face="verdana">Dublin City University</font></a></footer>
-					</blockquote>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-<div class="container" style="padding: 40px 0px 40px 0px;">
-		<div style="width: 100%; height: 20px; border-bottom: 1px solid black; text-align: center">
-  			<span style="font-size: 25px; background-color: #f9f9f9; padding: 50px;">
-    			Contact  <!--Padding is optional-->
   			</span>
 		</div>
 
@@ -106,8 +82,8 @@
   </div>-->
 
 
-
-<app-footer></app-footer>
 </section>
+<app-footer></app-footer>
+
 
 
