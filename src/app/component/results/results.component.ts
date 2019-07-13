@@ -4,6 +4,10 @@ import  {search} from '../../../search';
 import  {LandingComponent} from '../landing/landing.component';
 import { ActivatedRoute,Event,Router,NavigationStart,NavigationEnd, NavigationCancel,NavigationError} from '@angular/router';
 
+
+import * as $ from 'jquery';
+
+
 @Component({
   selector: 'app-results',
   templateUrl: './results.component.html',
@@ -29,20 +33,23 @@ export class ResultsComponent implements OnInit{
        this.country = params['country'];
        // In a real app: dispatch action to load the details here.
         this.executeSearch();
+
+
+        /*$(document).ready(function() {
+        var x = document.getElementById("myDIV");
+        var y= document.getElementById("loader");
+        if ( $('#myDIV').length<0 ) {
+          console.log("mydiv is hidden");
+          y.style.visibility = "visible";
+          }
+      });*/ //will use this for spinner later on 
+
+
     });
-
-
-
+}
   	
-  }
-
-  /*ngAfterContentChecked() {
-
-  	[routerLink]="['/profile',result.country]"
-this.results=this.searchService.result;
-console.log(this.results+"results comp")
-console.log(this.searchService.ServiceQuery+"is the search query");
-  }*/
+  
+    
 
 
 executeSearch(){

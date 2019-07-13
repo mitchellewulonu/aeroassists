@@ -3,13 +3,44 @@
 <app-navbar></app-navbar>
 
 
-<section  ng-view autoscroll>
+<!--<div id ="loader">
+  
+
+</div>-->
+
+
+<!--<section id ="loader">
+
 <div class="result-page" ui-view="header" autoscroll="true">
 
  <div class="row">
     <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"> <p></p></div>
     <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8"> 
-    <p>{{results.length}} Results Returned</p></div>
+    <p> Please wait while we find results....</p></div>
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"> <p></p></div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+    </div>
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" >         
+
+     </div>
+    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">  </div>
+  </div>
+
+</div>
+
+</section>-->
+
+<section  ng-view autoscroll>
+<div class="result-page" ui-view="header" autoscroll="true" >
+
+ <div class="row">
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"> <p></p></div>
+    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8"> 
+    <p id="myDIV">{{results.length}} Results Returned</p></div>
     <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"> <p></p></div>
   </div>
 

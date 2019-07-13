@@ -23,7 +23,8 @@ import { ProfileComponent } from './component/profile/profile.component';
 
 
 const appRoutes: Routes = [
-  {path:'', component:LandingComponent},  //important
+  {path:'', component:LandingComponent}
+  {path:'landing', component:LandingComponent},  //important
   //{path:'results', component:ResultsComponent}
   {path: 'results/:sq/:country', component: ResultsComponent },
   {path: 'profile/:name', component: ProfileComponent },
