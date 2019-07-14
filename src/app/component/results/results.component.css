@@ -6,13 +6,14 @@ p{
 section{
 
 	padding-top: 75px;
+	padding-right: 0px;
 
 	background-color: #f9f9f9;
 
 	border:1px solid black;
 
 	width: 100vw;
-	height: 100vh;
+	min-height: 100vh;
 }
 
 ol{

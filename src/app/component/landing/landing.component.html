@@ -1,54 +1,61 @@
-<div class="landing-bg" autoscroll="true">
-<app-navbar></app-navbar>
+
+	<app-navbar></app-navbar>
 	
-<section class="home" id="home">
+	<div class="home" id="home">
 	
-<h1>Home</h1>
+	<section>
+		
+		<h1>Home</h1>
+	</section>
 
 
+	<img class="center" src="https://img.icons8.com/color/300/000000/air-pilot-hat.png">
 
-<img class="center" src="https://img.icons8.com/color/300/000000/air-pilot-hat.png">
+<div class="container-fluid">
+	
+		<div class="row" style=" text-align: center;">
 
-<div class="row" style=" text-align: center;">
 
-	<div class="row" style="margin-top: 50px;">
-	  <div class="col-md-3"></div>
-	  <div class="col-md-6" style="background-color: #263238; padding: 20px 0px 20px 0px; border-radius: 25px; ">
-	  <input name="what" placeholder="I'm looking for..."  [(ngModel)]="searchQuery" [value]="searchQuery" style="padding-left: 10px;  border-radius: 10px; border-style: none;  height: 50px; width: 270px;"> 
-	  <span style=" padding: 0px 10px 0px 10px"> in </span> 
-	  <input name="what" placeholder="E.g Nigeria" [(ngModel)]="country" style="padding-left: 10px;  border-radius: 10px; border-style: none; height: 50px; "> 
-	  <a [routerLink]="['/results',searchQuery,country]" routerLinkActive="active"><span style="padding: 0px 10px 0px 20px;"> 
+		 <div class="col-md-3"></div>
+		  <div class="col-md-6" style="background-color: #263238; padding: 20px 0px 20px 0px; border-radius: 25px; ">
+		  <input name="what" placeholder="I'm looking for..."  [(ngModel)]="searchQuery" [value]="searchQuery" style="padding-left: 10px;  border-radius: 10px; border-style: none;  height: 50px; width: 270px;"> 
+		  <span style=" padding: 0px 10px 0px 10px"> in </span> 
+		  <input name="what" placeholder="E.g Nigeria" [(ngModel)]="country" style="padding-left: 10px;  border-radius: 10px; border-style: none; height: 50px; "> 
+		  <a [routerLink]="['/results',searchQuery,country]" routerLinkActive="active"><span style="padding: 0px 10px 0px 20px;"> 
 
-	  <button style="font-size: 20px; font-family: Courier; height: 50px; width: 100px; background-color: #ffeb3b; border-radius: 10px; border-style: none; "> Find</button></span></a>
-	  </div>
-	  <div class="col-md-3"></div>
+		  <button style="font-size: 20px; font-family: Courier; height: 50px; width: 100px; background-color: #ffeb3b; border-radius: 10px; border-style: none; "> Find</button></span></a>
+		  </div>
+		  <div class="col-md-3"></div>
+
 	</div>
 
 </div>
 
-</section>
-
-<!--
-<section class="about" id="about">
-	
-<h1>About</h1>
-
-</section>
 
 
-<section class="list-your-business" id="list-your-business">
-	
-<h1>List Your Business</h1>
 
-</section>
+	</div>
+
+	<!--
+	<section class="about" id="about">
+		
+	<h1>About</h1>
+
+	</section>
 
 
-<section class="contact" id="contact">
-	
-<h1>Contact</h1>
+	<section class="list-your-business" id="list-your-business">
+		
+	<h1>List Your Business</h1>
 
-</section>
+	</section>
 
-</div>-->
+
+	<section class="contact" id="contact">
+		
+	<h1>Contact</h1>
+
+	</section>-->
+
 
 <!-- routerLink="results" routerLinkActive="active"-->

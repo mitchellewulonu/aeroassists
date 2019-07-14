@@ -34,9 +34,11 @@
 
 </section>-->
 
-<section  ng-view autoscroll>
-<div class="result-page" ui-view="header" autoscroll="true" >
+<section >
+<div class="result-page " ui-view="header" autoscroll="true" >
 
+<div class="container-fluid">
+  
  <div class="row">
     <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"> <p></p></div>
     <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8"> 
@@ -44,49 +46,58 @@
     <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"> <p></p></div>
   </div>
 
+</div>
 
-  <div class="row">
+
+<div class="container-fluid">
+  
+    <div class="row">
     <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"></div>
     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
 
 
-    <ol class="result-view" *ngFor="let result of results ; let i = index" >
+        <ol class="result-view" *ngFor="let result of results ; let i = index" >
+          
+           <div class="row">
+             <a [routerLink]="['/profile',result.name]">
+            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 result-img" id="result-img">
+              <p>image</p>
+            </div>
+                 
+
+               <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 ">
+                 
+                 <li>
+              <p>{{result.name}}</p>
+              <p>{{result.country}} </p>
+              <p>hello me</p>
+              <p>hello me</p>
+            </li>   
+
+               </div>
+           </a>
+           </div>
     
-     <div class="row">
-     <a [routerLink]="['/profile',result.name]">
-		<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 result-img" id="result-img">
-			<p>image</p>
-		</div>
-     		
 
-     	<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 ">
-     		
-       	<li>
-			<p>{{result.name}}</p>
-			<p>{{result.country}} </p>
-			<p>hello me</p>
-			<p>hello me</p>
-		</li>   
-
-     	</div>
-   </a>
-     </div>
-	
-
-  
-    </ol>
-   
+    
+      </ol>
      
+       
 
-     </div>
-    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"></div>
+       </div>
+      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"></div>
   </div>
+
+</div><!--fluid end-->
+
 
 </div>
 
-</section>
 
+
+</section>
 <app-footer></app-footer>
+
 
 </Div>
 
