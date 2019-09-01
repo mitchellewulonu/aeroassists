@@ -93,7 +93,7 @@ app.get("/api/search", function(req, res) {
       res.send(docs);
       //.json(docs);
       console.log('data retrieval finished');
-
+      
     }
   });
 });
@@ -112,7 +112,7 @@ app.get("/api/search/:country/:services", function(req, res) {
       res.send(docs);
       //.json(docs);
       console.log('data retrieval finished');
-
+      console.log(docs);
     }
   });
 });

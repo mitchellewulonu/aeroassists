@@ -20,7 +20,7 @@ export class SearchService {
 
   search(searchQuery:string, country:string, callback:(data:Array<object>)=> void){
 
-  	 this.http.get('https://aeroassists.herokuapp.com/api/search/' + country  + '/' + searchQuery )
+  	 this.http.get((('http://localhost:8080/api/search/' + country  + '/' + searchQuery) || ('https://aeroassists.herokuapp.com/api/search/' + country  + '/' + searchQuery)))
   		.map(res => res.json()).subscribe(results => 
     {
       this.result=results;

@@ -56,7 +56,7 @@
     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
 
 
-        <ol class="result-view" *ngFor="let result of results ; let i = index" >
+        <ul class="result-view" *ngFor="let result of results ; let i = index" >
           
            <div class="row">
              <a [routerLink]="['/profile',result.name]">
@@ -68,7 +68,7 @@
                <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 ">
                  
                  <li>
-              <p>{{result.name}}</p>
+              <p>{{i + 1}} {{result.name}}</p>
               <p>{{result.country}} </p>
               <p>hello me</p>
               <p>hello me</p>
@@ -80,7 +80,7 @@
     
 
     
-      </ol>
+      </ul>
      
        
 
