@@ -20,7 +20,7 @@ export class ProfileService {
 
   profileFind(profileName:string, callback:(data:Array<object>)=> void){
 
-  	 this.http.get((('http://localhost:8080/api/profile/' + profileName) ||  ('https://aeroassists.herokuapp.com/api/profile/' + profileName)  ))
+  	 this.http.get((/*('http://localhost:8080/api/profile/' + profileName) || */ ('https://aeroassists.herokuapp.com/api/profile/' + profileName)  ))
   		.map(res => res.json()).subscribe(profile => 
     {
       this.profile=profile;
