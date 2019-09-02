@@ -37,6 +37,7 @@ export class ProfileComponent implements OnInit {
 
       if(data.length>0){
         this.profile=this.profileService.profile;
+        console.log()
         this.dataFlag=true;
       }
 

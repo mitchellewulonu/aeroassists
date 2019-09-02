@@ -15,7 +15,7 @@
 
 
 <div class="container" style="padding: 20px 0px 0px 0px;">
-	<img src="{{Profile.DP}}" class="img-circle img-responsive img-responsive">
+	<img src="{{Profile.DP}}" width="200" height="121" class="img-circle img-responsive img-responsive center">
 	
 </div>
 
@@ -49,10 +49,44 @@
 		</div>	
 </div>
 
+		<div>
+				<div class="row">
+					<div class="col-md-4 col-sm-4 ">
+						<div class="panel panel-default text-center">
+							<div class="panel-body">
+								<img  src="../../../assets/images/icons8-phone-64.png">
+								<h4>{{Profile.Profile.Info.phone}}</h4>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-4 ">
+						<div class="panel panel-default text-center">
+							<div class="panel-body">
+								<img  src="../../../assets/images/icons8-email-64.png">
+								<h4>{{Profile.Profile.Info.email}}</h4>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-4">
+						<div class="panel panel-default text-center">
+							<div class="panel-body">
+								<img src="../../../assets/images/icons8-location-64.png">
+								<h4>{{Profile.Profile.Info.location.country}}</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+		</div>	
 
-
-		<p class="text-justify" >
-		{{Profile.Profile.Bio}}
+		<div class="mapouter">
+		<div class="gmap_canvas">
+		<iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=89Alexandrawalk&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+			
+		</iframe>Google Maps Generator by 
+		</div>
+		<style>.mapouter{position:relative;text-align:right;height:500px;width:600px;}.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}
+		</style>
+		</div>
 
 </div>
 
@@ -68,9 +102,10 @@
 
 
 	<div class="" style="padding-top: 20px;" >
-					<ul>
+					<ul class="list-inline">
 						<li *ngFor="let services of Profile.services ; let s = index"> 
-						{{services}}
+						<button type="button" class="btn btn-info">{{services}}</button>
+
 						</li>  
 					</ul>
 	</div>
