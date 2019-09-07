@@ -47,6 +47,8 @@ export class ProfileComponent implements OnInit {
         this.dataFlag=false;
       } 
 
+      //console.log(`I'm ${Pro} years old!`)
+
     }
 
     )
