@@ -3,6 +3,8 @@ import {ProfileService} from '../../services/profile/profile.service'
 import  {Profile} from '../../profile.model';
 import  {LandingComponent} from '../landing/landing.component';
 import { ActivatedRoute,Event,Router,NavigationStart,NavigationEnd, NavigationCancel,NavigationError} from '@angular/router';
+import { environment } from '../../../environments/environment';
+
 
 @Component({
   selector: 'app-profile',
@@ -16,6 +18,7 @@ export class ProfileComponent implements OnInit {
 	profile:Profile[];
 	 dataFlag:boolean =true;
    services:any;
+   GMAP_API:string=environment.GOOGLEMAP_APIKEY;
 
   constructor(private profileService:ProfileService, private route: ActivatedRoute) { }
 
@@ -25,6 +28,7 @@ export class ProfileComponent implements OnInit {
        this.name = params['name']; // (+) converts string 'id' to a number
        // In a real app: dispatch action to load the details here.
        this.getProfile();
+       console.log(this.GMAP_API);
        
        
     });

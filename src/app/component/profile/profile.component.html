@@ -78,21 +78,50 @@
 				</div>
 		</div>	
 
-		<div class="mapouter">
-		<div class="gmap_canvas">
-		<iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=89Alexandrawalk&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
-			
-		</iframe>Google Maps Generator by 
+
+
+	<div class="row">
+		<div class="col-sm-6 col-md-6">
+			<h4>Head Office</h4>
+			<p>{{Profile.Profile.Info.location.address}}</p>
+				
+
+			<h4>Phone(s)</h4>
+			<p>{{Profile.Profile.Info.phone}}</p>
+
+			<h4>Website</h4>
+			<a href="{{Profile.Profile.Info.website}}">{{Profile.Profile.Info.website}}</a>
+
+			<h4>Email(s)</h4>
+			<p>{{Profile.Profile.Info.email}}</p>
+
+			<h4>Opening Times</h4>
+			<p>Monday: {{Profile.Profile.Info.times.mon}}</p>
+			<p>Tuesday: {{Profile.Profile.Info.times.tues}}</p>
+			<p>Wednesday: {{Profile.Profile.Info.times.wed}}</p>
+			<p>Thursday: {{Profile.Profile.Info.times.thurs}}</p>
+			<p>Friday: {{Profile.Profile.Info.times.fri}}</p>
+			<p>Saturday: {{Profile.Profile.Info.times.sat}}</p> 
+			<p>Sunday: {{Profile.Profile.Info.times.sun}}</p>
+
+
 		</div>
-		<style>.mapouter{position:relative;text-align:right;height:500px;width:600px;}.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}
-		</style>
+
+		<div class="col-sm-6 col-md-6">
+			<div class="gmap_canvas">
+			<img class="img-thumbnail img-responsive" src="https://maps.googleapis.com/maps/api/staticmap?center=1+ALEXANDRA+Walk,CLANE,IRELAND&zoom=17&size=600x400&maptype=roadmap&markers=color:red%7C1+ALEXANDRA+Walk,CLANE,IRELAND&key={{GMAP_API}}">
 		</div>
+
+		</div>
+
+
+	</div>
+
 
 </div>
 
 
-
-<div class="container" style="padding: 40px 0px 40px 0px; ">
+<div class="container" >
 		<div style="width: 100%; height: 20px; border-bottom: 1px solid black; text-align: center">
   			<span style="font-size: 25px; background-color: #f9f9f9; padding: 20px; ">
     			Services  <!--Padding is optional-->
@@ -103,8 +132,8 @@
 
 	<div class="" style="padding-top: 20px;" >
 					<ul class="list-inline">
-						<li *ngFor="let services of Profile.services ; let s = index"> 
-						<button type="button" class="btn btn-info">{{services}}</button>
+						<li  *ngFor="let services of Profile.services ; let s = index"> 
+						<button  class="btn btn-info">{{services}}</button>
 
 						</li>  
 					</ul>

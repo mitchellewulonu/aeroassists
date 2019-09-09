@@ -41,6 +41,7 @@ var mongodb = require("mongodb");
 var ObjectID = mongodb.ObjectID;
 
 var COLLECTION = "fulldb";
+var GMAP_API=process.env.GOOGLEMAP_APIKEY;
 
 var app = express();
 app.use(bodyParser.json());
